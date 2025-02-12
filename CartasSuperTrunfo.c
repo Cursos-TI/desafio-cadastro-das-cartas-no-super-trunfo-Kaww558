@@ -18,29 +18,42 @@ int main() {
     // Sugestão: Utilize a função printf para exibir as informações das cartas cadastradas de forma clara e organizada.
     // Exiba os valores inseridos para cada atributo da cidade, um por linha.
 
-int cdc,npt,area,PIB,p;
-
-char nome[50];
+int npt,p;
+float area ,PIB;
+char nomec[50],cdc[4],est[50];
 printf("Para cadastrar sua carta insira as seguintes informações \n");
-printf("O codigo da carta: ");
-scanf("%d",&cdc);
+
+printf("Nome do Estado: ");
+scanf(" %49s",est);
+
 printf("Nome da cidade: ");
-scanf("%49s",nome);
-printf("População: ");
+scanf(" %49s",nomec);
+
+printf("Codigo da carta: ");
+scanf(" %3s",cdc);
+
+printf("Populaco: ");
 scanf(" %d",&p);
+
 printf("Area da cidade: ");
-scanf("%d",&area);
+scanf(" %f",&area);
+
 printf("O PIB da cidade: ");
-scanf("%d",&PIB);
+scanf(" %f",&PIB);
+
 printf("Numero de pontos turisticos: ");
-scanf("%d",&npt);
-printf("Os dados de sua carta são: \n");
-printf("\n Nome: %s \n",nome);
-printf("\n A População: %d \n",p);
-printf("\n Area da Cidade: %d \n",area);
-printf("\n O PIB da Cidade: %d \n",PIB);
-printf("\n O Numero de pontos turisticos: %d \n",npt);
-printf("\n O Codigo da sua carta: %d \n",cdc);
+scanf(" %d",&npt);
+
+   printf("\nOs dados de sua carta são:\n");
+    printf(" Nome da Cidade: %s\n", nomec);
+    printf(" Nome do Estado: %s\n", est);
+    printf(" Código da Carta: %s\n", cdc);
+    printf(" População: %d habitantes\n", p);
+    printf(" Área da Cidade: %.2f km²\n", area);
+    printf(" PIB da Cidade: R$ %.2f Reais\n", PIB);
+    printf(" Número de Pontos Turísticos: %d\n", npt);
+
+
 
     return 0;
 }
