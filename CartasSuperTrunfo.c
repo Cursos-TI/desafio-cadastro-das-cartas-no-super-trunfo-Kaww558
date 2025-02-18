@@ -17,11 +17,11 @@ int main() {
     // Exibição dos Dados das Cartas:
     // Sugestão: Utilize a função printf para exibir as informações das cartas cadastradas de forma clara e organizada.
     // Exiba os valores inseridos para cada atributo da cidade, um por linha.
-
+//carta1
 int npt,p;
-float area ,PIB;
+float area ,PIB,dp,PIBC;
 char nomec[50],cdc[4],est[50];
-printf("Para cadastrar sua carta insira as seguintes informações \n");
+printf("Insira as seguintes informações da Primeira Carta \n");
 
 printf("Nome do Estado: ");
 scanf(" %49s",est);
@@ -32,26 +32,99 @@ scanf(" %49s",nomec);
 printf("Codigo da carta: ");
 scanf(" %3s",cdc);
 
-printf("Populaco: ");
+printf("Populacao: ");
 scanf(" %d",&p);
 
 printf("Area da cidade: ");
 scanf(" %f",&area);
-
+dp=p / area;
 printf("O PIB da cidade: ");
 scanf(" %f",&PIB);
-
+PIBC=PIB/p;
 printf("Numero de pontos turisticos: ");
 scanf(" %d",&npt);
 
-   printf("\nOs dados de sua carta são:\n");
+   //carta2
+    int c2npt,c2p;
+    float c2area ,c2PIB,c2dp,c2PIBC;
+    char c2nomec[50],c2cdc[4],c2est[50];
+
+    printf("\n Insira as  informações da Segunda Carta \n");
+    
+    printf("Nome do Estado: ");
+    scanf(" %49s",c2est);
+    
+    printf("Nome da cidade: ");
+    scanf(" %49s",c2nomec);
+    
+    printf("Codigo da carta: ");
+    scanf(" %3s",c2cdc);
+    
+    printf("Populacao: ");
+    scanf(" %d",&c2p);
+    
+    printf("Area da cidade: ");
+    scanf(" %f",&c2area);
+    c2dp=c2p / c2area;
+    printf("O PIB da cidade: ");
+    scanf(" %f",&c2PIB);
+    c2PIBC=c2PIB/c2p;
+    printf("Numero de pontos turisticos: ");
+    scanf(" %d",&c2npt);
+    
+
+
+
+
+
+
+//carta1 dados
+    printf("\nOs dados da Primeira carta são:\n");
     printf(" Nome da Cidade: %s\n", nomec);
     printf(" Nome do Estado: %s\n", est);
     printf(" Código da Carta: %s\n", cdc);
     printf(" População: %d habitantes\n", p);
     printf(" Área da Cidade: %.2f km²\n", area);
-    printf(" PIB da Cidade: R$ %.2f Reais\n", PIB);
+    printf(" PIB da Cidade: %.2f \n", PIB);
     printf(" Número de Pontos Turísticos: %d\n", npt);
+    printf(" densidade populacional: %.2f hab/km²\n",dp);
+    printf(" PIB per Capita: R$ %.2f Reais \n",PIBC);
+    ////carta2 dados
+       printf("\nOs dados da Segunda carta são:\n");
+        printf(" Nome da Cidade: %s\n", c2nomec);
+        printf(" Nome do Estado: %s\n", c2est);
+        printf(" Código da Carta: %s\n", c2cdc);
+        printf(" População: %d habitantes\n", c2p);
+        printf(" Área da Cidade: %.2f km²\n", c2area);
+        printf(" PIB da Cidade: %.2f \n", PIB);
+        printf(" Número de Pontos Turísticos: %d\n", c2npt);
+        printf(" densidade populacional: %.2f hab/km²\n",c2dp);
+        printf(" PIB per Capita: R$ %.2f Reais\n",c2PIBC);
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
