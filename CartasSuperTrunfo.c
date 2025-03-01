@@ -21,6 +21,7 @@ int main() {
 int npt,p;
 float area ,PIB,dp,PIBC;
 char nomec[50],cdc[4],est[50];
+
 printf("Insira as seguintes informações da Primeira Carta \n");
 
 printf("Nome do Estado: ");
@@ -73,12 +74,10 @@ scanf(" %d",&npt);
     scanf(" %d",&c2npt);
     
 
-
-
-
-
+ 
 
 //carta1 dados
+ float ss=  area + PIB + dp + PIBC + npt + p;
     printf("\nOs dados da Primeira carta são:\n");
     printf(" Nome da Cidade: %s\n", nomec);
     printf(" Nome do Estado: %s\n", est);
@@ -89,7 +88,12 @@ scanf(" %d",&npt);
     printf(" Número de Pontos Turísticos: %d\n", npt);
     printf(" densidade populacional: %.2f hab/km²\n",dp);
     printf(" PIB per Capita: R$ %.2f Reais \n",PIBC);
+    printf(" Super Poder: %.2f \n ",ss);
+
+
+
     ////carta2 dados
+     float  ss2=  c2area + c2area + c2dp + c2PIBC + c2npt + c2p;
        printf("\nOs dados da Segunda carta são:\n");
         printf(" Nome da Cidade: %s\n", c2nomec);
         printf(" Nome do Estado: %s\n", c2est);
@@ -100,10 +104,11 @@ scanf(" %d",&npt);
         printf(" Número de Pontos Turísticos: %d\n", c2npt);
         printf(" densidade populacional: %.2f hab/km²\n",c2dp);
         printf(" PIB per Capita: R$ %.2f Reais\n",c2PIBC);
-    
+        printf(" Super Poder: %.2f\n ",ss2);
 
 
-
+printf("\nComparacao Das cartas\n   (1)(=)(carta 1 ganhou) \n   (0)(=)( carta 2 ganhou)  \n ");
+printf(" \n A carta ganhadora e: %d \n",ss > ss2); 
 
 
 
